@@ -10,7 +10,7 @@ import { Provider } from 'mobx-react';
 const Root: React.FC = () => {
     return (
         <Provider store={store}>
-            <App title='Hello, Web!' />
+            <App />
         </Provider>
     )
 }
