@@ -12,11 +12,11 @@ class TodoList extends React.Component {
   }
 
   render() {
-    const { todos } = this.injected.store;
+    const { store } = this.injected;
     return (
       <List>
         {
-          todos.map(todo => <Todo key={todo.id} todo={todo}/>)
+          store.getTodos().map(todo => <Todo key={todo.id} todo={todo}/>)
         }
       </List>
     )

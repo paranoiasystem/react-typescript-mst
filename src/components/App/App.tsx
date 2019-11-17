@@ -1,21 +1,18 @@
 import React from 'react';
 import './App.css';
-import { Grid } from '@material-ui/core'
+import { Container } from '@material-ui/core'
 import TodoList from '../TodoList'
 import TodoInput from '../TodoInput';
+import TodoListStatus from '../TodoListStatus';
 
 class App extends React.Component {
-
   render() {
     return (
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
-          <TodoInput />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <TodoList />
-        </Grid>
-      </Grid>
+      <Container>
+        <TodoInput />
+        <TodoListStatus />
+        <TodoList />
+      </Container>
     );
   }
 }
