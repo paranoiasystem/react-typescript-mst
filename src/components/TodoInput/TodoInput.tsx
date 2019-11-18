@@ -27,16 +27,17 @@ const TodoInput: React.FC = inject('store')((props) => {
             {({ values, handleChange }) => (
                 <Form>
                     <Grid container spacing={2}>
-                        <Grid item xs={10} md={10}>
+                        <Grid item xs={10}>
                             <TextField 
                                 id="todoTitle"
                                 fullWidth
                                 onChange={handleChange}
                                 value={values.todoTitle || ''}
+                                placeholder='Todo Title'
                             />
                         </Grid>
-                        <Grid item xs={2} md={2}>
-                            <Button type='submit'>
+                        <Grid item xs={2}>
+                            <Button size="small" variant="contained" color="primary" type='submit'>
                                 Add Todo
                             </Button>
                         </Grid>
